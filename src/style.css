@@ -2,7 +2,6 @@ div {
     margin-left: 10px;
 }
 
-/*//////filters*/
 
 html, body {
     box-sizing: border-box;
@@ -27,3 +26,6 @@ nav ul li {
     padding: 10px 40px 10px 0;
     cursor: pointer;
 }
+
+
+
