@@ -6,7 +6,8 @@ body {
 
 .container {
   background-image: url(image./bg.jpg);
-  height: 100vh;
+  height: 1080px;
+  max-width: 1920px;
 }
 
 .container {
@@ -56,22 +57,31 @@ body {
   font-size: 20px;
 }
 
+.btnFilterFilms:hover {
+  background-color: #c54800;
+  cursor: pointer;
+}
+
 .cartFilms {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 30px;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 .cartFilm {
   height: 300px;
-  width: 200px;
+  width: 250px;
   background-color: #fff;
+  background-image: url(image/poster.jpg);
 }
 
 .hiddenBlock {
   opacity: 0;
   height: 300px;
+  width: 250px;
   transition: all 0.4s ease-out;
 }
 
@@ -94,6 +104,102 @@ body {
   background-color: black;
 }
 
+.contactUs {
+  margin-bottom: 10px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.developers {
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.irina,
+.roman,
+.maxim,
+.olga,
+.vladislav {
+  padding-right: 30px;
+}
+
+.lodoDevEducation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lodoDevEducationFooter {
+  height: 45px;
+  width: 210px;
+}
+
+.film {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+  color: #000;
+}
+
+.description {
+  width: 600px;
+  padding-left: 30px;
+  background-color: gray;
+}
+
+.movieTitle {
+  color: #fff;
+  font-size: 36px;
+  font-family: Roboto;
+  margin-bottom: 30px;
+}
+
+.status {
+  font-size: 24px;
+  font-family: Roboto;
+  margin-bottom: 20px;
+}
+
+.runtime,
+.rate {
+  font-size: 18px;
+  font-family: Roboto;
+}
+
+.rate {
+  margin-bottom: 30px;
+}
+
+.descriptionFilm {
+  font-size: 20px;
+  font-family: Roboto;
+  margin-bottom: 20px;
+}
+
+.btnWatchFilm {
+  height: 40px;
+  width: 150px;
+  color: #fff;
+  background-color: #ff5f05;
+  border-radius: 90px;
+  border: 0;
+}
+
+.btnWatchFilm:hover {
+  background-color: #c54800;
+}
+
 .filterPopup {
   display: flex;
   justify-content: center;
@@ -109,9 +215,6 @@ body {
   background-color: #2a2d34;
   color: #fff;
   height: 400px;
-}
-
-.headerFilter {
 }
 
 .filterTitles {
