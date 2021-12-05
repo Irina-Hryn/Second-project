@@ -1,0 +1,18 @@
+const DOM = {
+    wrapperIn: document.querySelector('.wrapper_In'),
+    wrapperUp: document.querySelector('.wrapper_Up'),
+    toSignIn: document.querySelector('.sign_in'),
+    toSignUp: document.querySelector('.sign_up'),
+    username: document.querySelector('.username'),
+    userpass: document.querySelector('.userpass'),
+    login: document.querySelector('.login'),
+    password: document.querySelector('.password'),
+    firstname: document.querySelector('.firstname'),
+    surname: document.querySelector('.surname'),
+    outputUp: document.querySelector('.outputUp'),
+    outputIn: document.querySelector('.outputIn'),
+    signUpButt: document.querySelector('.signUpButt'),
+    signInButt: document.querySelector('.signInButt'),
+    requestURl: 'https://wowmeup.pp.ua/user/sing_up',
+    requestURlsignIn: 'https://wowmeup.pp.ua/user/sign_in',
+}
