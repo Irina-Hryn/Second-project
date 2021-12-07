@@ -46,45 +46,87 @@ domElement.adult.addEventListener('click', (event) => {
 // })
 
 const getFilmByID = () => {
-    constants.movies.forEach((el) => {
-        if (el.id === +domElement.filmId.value) {
-            console.log('el.id', el.id)
-            constants.filteredFilms.push(el)
-        }
-    })
-    console.log(constants.filteredFilms)
+    // debugger
+    // constants.movies.forEach((el) => {
+    //     if (el.id === +domElement.filmId.value) {
+    //         console.log('el.id', el.id)
+    //         constants.filteredFilms.push(el)
+    //     }
+    // })
+    // console.log(constants.filteredFilms)
+
+    if (constants.filteredFilms.length > 0) {
+        // constants.filteredFilms = []
+        constants.filteredFilms.forEach((el) => {
+
+
+            if (el.id === +domElement.filmId.value) {
+                        console.log('el.id', el.id)
+                        constants.filmByLang.push(el)
+                    }
+
+            constants.filteredFilms = constants.filmByLang;
+
+        })
+        console.log(constants.filteredFilms)
+    }else {
+        constants.movies.forEach((el) => {
+
+            if (el.id === +domElement.filmId.value) {
+                // constants.movies = []
+                constants.filteredFilms.push(el)
+            }
+            console.log(constants.filteredFilms)
+        })
+    }
 }
 
 
 const getFilmByLanguage = () => {
-    constants.filteredFilms.forEach((el) => {
-        constants.filteredFilms = []
-        if (el.original_language === domElement.selectLanguage.value){
-            constants.filteredFilms.push(el)
-        }
+// debugger
+    if (constants.filteredFilms.length > 0) {
+        // constants.filteredFilms = []
+        constants.filteredFilms.forEach((el) => {
+
+
+            if (el.original_language === domElement.selectLanguage.value) {
+
+                constants.filmByLang.push(el)
+                console.log('have', constants.filmByLang)
+            }
+            constants.filteredFilms = constants.filmByLang;
+
+        })
+        console.log(constants.filteredFilms)
+    }else {
+        constants.movies.forEach((el) => {
+
+            if (el.original_language === domElement.selectLanguage.value) {
+                constants.movies = []
+                constants.filteredFilms.push(el)
+            }
+        })
+    }
+}
+
+    const clearStor = () => {
+        localStorage.clear()
+    }
+
+
+    domElement.btnFilter.addEventListener('click', (el) => {
+        console.log('here')
+        // debugger
+        getFilmByID()
+        getFilmByLanguage()
+
+        creatFirstPage(constants.filteredFilms)
+        console.log('oooooooooooooooooooo', constants.filteredFilms)
+
+
+        // console.log()
+        // console.log(variable.maxBudget)
+        // console.log(variable.minBudget)
+        // getBudget()
+        // console.log(constants.budgetFilms)
     })
-    console.log(constants.filteredFilms)
-}
-
-const clearStor = () => {
-    localStorage.clear()
-}
-
-
-
-domElement.btnFilter.addEventListener('click', (el) => {
-    console.log('here')
-    // debugger
-    getFilmByID()
-    getFilmByLanguage()
-
-    creatFirstPage(constants.filteredFilms)
-
-
-
-    // console.log()
-    // console.log(variable.maxBudget)
-    // console.log(variable.minBudget)
-    // getBudget()
-    // console.log(constants.budgetFilms)
-})

@@ -6,6 +6,8 @@ const constants = {
     filteredFilms: [],
     adultFilms: [],
     budgetFilms: [],
+    filmByLang: []
+
 
 };
  const domElement = {
