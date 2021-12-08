@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,35 +8,127 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
 </head>
+
 <body>
-<main>
-    <div class="container">
-        <nav class="navigation">
-            <div class="logo">Logo</div>
-            <div class="navigationRight">
-
-                <div class="home">HOME</div>
-                <div class="second">SECOND</div>
-                <div class="signOut">SIGN OUT</div>
+    <div class="wrapRegistr">
+        <div class="registr">
+            <div class="wrapIn hidden">
+                <div class="wrapper_In">
+                    <div class="box" action="index.html" method="post">
+                        <h1>Sign In</h1>
+                        <input class="username" type="text" name="" placeholder="Username">
+                        <input class="userpass" type="password" name="" placeholder="Password">
+                        <input type="button" class="signInButt" name="" value="Login">
+                        <p class="outputIn"></p>
+                        <p class="sign_in">Sign Up</p>
+                    </div>
+                </div>
             </div>
-        </nav>
-        <!--
-      <div class="signIn"></div>
-      <div class="signUp"></div>
-      -->
-        <div class="films">
-            <div class="header"><h2>FILMS</h2></div>
-            <button class="btnFilterFilms">Filter</button>
-            <a href="#" class="btnRight"><img src="image/arrow.png" alt="Next"></a>
-            <div class="cartFilms">
-
-
+            <div class="wrapUp">
+                <div class="wrapper_Up">
+                    <div class="box" action="index.html" method="post">
+                        <h1>Sign Up</h1>
+                        <input class="firstname" type="text" name="" placeholder="First_name">
+                        <input class="surname" type="text" name="" placeholder="Last_name">
+                        <input class="login" type="text" name="" placeholder="Login">
+                        <input class="password" type="password" name="" placeholder="Password">
+                        <input class="signUpButt" type="button" name="" value="Login">
+                        <p class="outputUp"></p>
+                        <p class="sign_up">Sign In</p>
+                    </div>
+                </div>
             </div>
-
-            <a href="#" class="btnLeft"><img src="image/arrow.png" alt="Next"></a>
         </div>
     </div>
+    <div class="filter hidden">
+        <div class="filterPopup">
+            <div class="containerFilter">
+                <div class="headerFilter">EXPLORE OUR TITLES</div>
+                <div class="filterTitle">
+                    <div class="filterTitles">FILTER TITLES</div>
+                    <!--                <div class="selectGenre">-->
+                    <!--                    <div class="genre">Genre</div>-->
+                    <!--                    <input type="checkbox" id="action"/><label for="action">Action</label>-->
+                    <!--                    <input type="checkbox" id="comedy"/><label for="comedy">Comedy</label>-->
+                    <!--                    <input type="checkbox" id="drama"/><label for="drama">Drama</label>-->
+                    <!--                    <input type="checkbox" id="family"/><label for="family">Family</label>-->
+                    <!--                    <input type="checkbox" id="fantasy"/><label for="fantasy">Fantasy</label>-->
+                    <!--                    <input type="checkbox" id="horror"/><label for="horror">Horror</label>-->
+                    <!--                    <input type="checkbox" id="adult"/><label for="adult">Adult</label>-->
+                    <!--                </div>-->
 
+                    <nav id="nav-block">
+                        <ul>
+                            <li data-f="Action" id="1" class="films" data-value="1">Action</li>
+                            <li data-f="Comedy" id="4" class="films" data-value="4">Comedy</li>
+                            <li data-f="Drama" id="7" class="films" data-value="7">Drama</li>
+                            <li data-f="Family" id="12" class="films" data-value="8">Family</li>
+                            <li data-f="Fantasy" id="9" class="films" data-value="9">Fantasy</li>
+                            <li data-f="Horror" id="3" class="films" data-value="11">Horror</li>
+                        </ul>
+                    </nav>
+
+                    <nav class="adult">
+                        <ul>
+                            <li data-f="Adult" id="false" class="films" data-value="true">Adult</li>
+                        </ul>
+                    </nav>
+
+
+                    <div class="selectRange">
+                        <div class="doubleRange">DoubleRange</div>
+                        <div class="doubleRange">DoubleRange</div>
+                    </div>
+                    <div class="selectOther">
+                        <label for="startData">Release data first</label>
+                        <input type="date" id="startData" value="2000-01-01" min="1900-01-01" max="2022-12-31">
+                        <label for="endData">Release data last</label>
+                        <input type="date" id="endData" value="2021-12-03" min="1900-01-01" max="2022-12-31">
+
+                        <label for="filmId">Film By Id</label>
+                        <input type="number" id="filmId" min="1" max="9999">
+
+                        <div class="languageSelect">Language</div>
+                        <input id="selectLanguage" list="language">
+                        <datalist id="language">
+                            <option value="en">
+                            <option value="ru">
+                            <option value="ko">
+                            <option value="it">
+                        </datalist>
+                    </div>
+                </div>
+                <div class="blockBtnFilter">
+                    <button class="btnFilter">Filter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <main>
+        <div class="container">
+            <nav class="navigation">
+                <div class="logo">Logo</div>
+                <div class="navigationRight hidden">
+                    <div class="home">HOME</div>
+                    <div class="second">SECOND</div>
+                    <div class="signOut">SIGN OUT</div>
+                </div>
+            </nav>
+            <div class="filmsArea hidden">
+                <div class="films">
+                    <div class="header">
+                        <h2>FILMS</h2>
+                    </div>
+                    <button class="btnFilterFilms">Filter</button>
+                    <a href="#" class="btnRight"><img src="image/arrow.png" alt="Next"></a>
+                    <div class="cartFilms">
+                    </div>
+                    <a href="#" class="btnLeft"><img src="image/arrow.png" alt="Next"></a>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer class="footer">
         <div class="contacts">
             <div class="contactUs"></div>
@@ -49,75 +142,11 @@
         </div>
         <div class="lodoDevEducation"></div>
     </footer>
-
-    <div class="filterPopup">
-        <div class="containerFilter">
-            <div class="headerFilter">EXPLORE OUR TITLES</div>
-            <div class="filterTitle">
-                <div class="filterTitles">FILTER TITLES</div>
-<!--                <div class="selectGenre">-->
-<!--                    <div class="genre">Genre</div>-->
-<!--                    <input type="checkbox" id="action"/><label for="action">Action</label>-->
-<!--                    <input type="checkbox" id="comedy"/><label for="comedy">Comedy</label>-->
-<!--                    <input type="checkbox" id="drama"/><label for="drama">Drama</label>-->
-<!--                    <input type="checkbox" id="family"/><label for="family">Family</label>-->
-<!--                    <input type="checkbox" id="fantasy"/><label for="fantasy">Fantasy</label>-->
-<!--                    <input type="checkbox" id="horror"/><label for="horror">Horror</label>-->
-<!--                    <input type="checkbox" id="adult"/><label for="adult">Adult</label>-->
-<!--                </div>-->
-
-                <nav id="nav-block">
-                    <ul>
-                        <li data-f="Action" id="1" class="films" data-value="1" >Action</li>
-                        <li data-f="Comedy" id="4" class="films" data-value="4">Comedy</li>
-                        <li data-f="Drama" id="7" class="films" data-value="7">Drama</li>
-                        <li data-f="Family" id="12" class="films" data-value="8">Family</li>
-                        <li data-f="Fantasy" id="9" class="films" data-value="9">Fantasy</li>
-                        <li data-f="Horror" id="3" class="films" data-value="11">Horror</li>
-                    </ul>
-                </nav>
-
-                <nav class="adult">
-                    <ul>
-                        <li data-f="Adult" id="false" class="films" data-value="true">Adult</li>
-                    </ul>
-                </nav>
-
-
-                <div class="selectRange">
-                    <div class="doubleRange">DoubleRange</div>
-                    <div class="doubleRange">DoubleRange</div>
-                </div>
-                <div class="selectOther">
-                    <label for="startData">Release data first</label>
-                    <input type="date" id="startData" value="2000-01-01" min="1900-01-01" max="2022-12-31">
-                    <label for="endData">Release data last</label>
-                    <input type="date" id="endData" value="2021-12-03" min="1900-01-01" max="2022-12-31">
-
-                    <label for="filmId">Film By Id</label>
-                    <input type="number" id="filmId" min="1" max="9999">
-
-                    <div class="languageSelect">Language</div>
-                    <input id="selectLanguage" list="language">
-                    <datalist id="language">
-                        <option value="en" >
-                        <option value="ru">
-                        <option value="ko">
-                        <option value="it">
-                    </datalist>
-                </div>
-            </div>
-            <div class="blockBtnFilter">
-                <button class="btnFilter">Filter</button>
-            </div>
-        </div>
-    </div>
-    </div>
-    </main>
 </body>
+<script src="../src/script/dom.js"></script>
 <script src="../src/script/constans.js"></script>
-<script src="../src/script/showMovie.js"></script>
 <script src="../src/script/Authorization.js"></script>
+<script src="../src/script/showMovie.js"></script>
 <script src="../src/script/filters.js"></script>
 
 

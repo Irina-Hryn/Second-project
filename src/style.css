@@ -1,15 +1,23 @@
+html,
+body {
+  height: 100%;
+}
 body {
     padding: 0;
     margin: 0;
     color: bisque;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1 0 auto
 }
 
 .container {
     background-image: url(image./bg.jpg);
-    height: 100vh;
-}
-
-.container {
+    background: cover;
+    background-repeat: no-repeat;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -92,22 +100,30 @@ body {
 }
 
 .footer {
+    flex: 0 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 100px;
     background-color: black;
 }
-
+.filter{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .filterPopup {
+    position: absolute;
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 900px;
     border: 1px solid black;
     color: #000;
     background-color: #000;
     opacity: 0.95;
+    margin-top: 134px;
 }
 
 .containerFilter {
@@ -116,15 +132,15 @@ body {
     height: 400px;
 }
 
-.headerFilter {
-}
-
 .filterTitles {
     margin-bottom: 25px;
 }
 
 .selectGenre {
     margin-bottom: 25px;
+}
+.hidden{
+    display: none;
 }
 
 .action,
@@ -174,5 +190,114 @@ body {
 
 .btnFilter:hover {
     background-color: #024c90;
+    cursor: pointer;
+}
+
+.registr{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.527);
+}
+
+.outputUp{
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0;
+    width: 300px;
+}
+.outputIn{
+    color: white;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0;
+    width: 300px;
+}
+.wrapper_In{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+.wrapper_Up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+.box h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.box{
+    border-radius: 10px;
+    width: 300px;
+    padding: 0 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #191919;
+    text-align: center;
+}
+
+.box input[type = "text"],.box input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type = "button"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;  
+}
+
+.box input[type = "button"]:hover{
+    background: #2ecc71;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+.sign_up{
+    cursor: pointer;
+}
+.sign_in{
+    cursor: pointer;
+}
+.signOut{
     cursor: pointer;
 }
