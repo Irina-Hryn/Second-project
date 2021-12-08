@@ -7,9 +7,8 @@ const constants = {
     adultFilms: [],
     budgetFilms: [],
     filmByLang: []
-
-
 };
+
  const domElement = {
      BtnLeft: document.querySelector('.btnRight'),
      BtnRight: document.querySelector('.btnLeft'),
@@ -36,3 +35,12 @@ let variable = {
     skip: 0,
     limit: 5
 };
+
+let filterData = {
+    genre_ids: [],
+    id: null,
+    release_date: null,
+    original_language: null,
+    budget: null,
+    adult: null,
+}
